@@ -1,2 +1,2 @@
-# milestones-Callum-Slowley
-milestones-Callum-Slowley created by GitHub Classroom
+# C++ Shooter Game - Callum Slowley
+## Game design, 2 in unique game mechanics
