@@ -26,9 +26,9 @@ int level1[20][25] = {
 };
 Map::Map()
 {
-	grass = TextureManager::LoadTexture("Images/Grass.png");
-	wall = TextureManager::LoadTexture("Images/Wall.png");
-	wallTop = TextureManager::LoadTexture("Images/WallTop.png");
+	grass = TextureManager::LoadTexture("Grass.png");
+	wall = TextureManager::LoadTexture("Wall.png");
+	wallTop = TextureManager::LoadTexture("WallTop.png");
 
 	Load(level1);
 
