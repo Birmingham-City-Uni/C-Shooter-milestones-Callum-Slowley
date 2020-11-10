@@ -1,7 +1,12 @@
 #include "GameLoop.h"
+#include "Map.h"
+#include <iostream>
+
+SDL_Renderer* GameLoop::renderer = nullptr;
+Map* map;
 
 GameLoop::GameLoop() {
-
+	map = new Map();
 	window = nullptr;
 	renderer = nullptr;
 	for (int i = 0; i < 512; i++) {
@@ -60,9 +65,11 @@ bool GameLoop::processInput()
 	}
 	return true;
 }
+
 void GameLoop::update()
 {
 	SDL_RenderClear(renderer);
+	map->Draw();
 }
 
 void GameLoop::draw()

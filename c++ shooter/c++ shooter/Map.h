@@ -8,7 +8,7 @@ public:
 	~Map();
 
 	//methods to load and draw the map
-	void Load();
+	void Load(int arr[20][25]);
 	void Draw();
 
 private:
