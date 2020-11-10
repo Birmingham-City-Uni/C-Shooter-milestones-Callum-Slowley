@@ -8,6 +8,7 @@ using namespace std;
 class GameLoop {
 public:
 	static SDL_Renderer* renderer;
+
 	GameLoop();
 
 	bool init();
@@ -27,6 +28,7 @@ public:
 		return false;
 	}
 private:
+
 	SDL_Window* window;
 
 	bool keyDown[512];
