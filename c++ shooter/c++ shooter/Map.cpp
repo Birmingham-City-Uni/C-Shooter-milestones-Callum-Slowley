@@ -15,3 +15,4 @@ void Map::Load()
 void Map::Draw()
 {
 }
+
