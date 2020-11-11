@@ -1,9 +1,11 @@
 #include "GameLoop.h"
 #include "Map.h"
+#include "Player.h"
 #include <iostream>
 
 SDL_Renderer* GameLoop::renderer = nullptr;
 Map* map;
+Player* player;
 
 GameLoop::GameLoop() {
 	window = nullptr;
@@ -43,6 +45,7 @@ bool GameLoop::init() {
 	}
 
 	map = new Map();
+	player = new Player();
 	return true;
 }
 
@@ -69,6 +72,7 @@ bool GameLoop::processInput()
 
 void GameLoop::update()
 {
+	player->update();
 	SDL_RenderClear(GameLoop::renderer);
 }
 
@@ -76,10 +80,11 @@ void GameLoop::draw()
 {
 	SDL_RenderClear(GameLoop::renderer);
 	map->Draw();
+	player->draw();
 	SDL_RenderPresent(GameLoop::renderer);
 	SDL_Delay(16);
 }
 
 void GameLoop::clean() {
-
+	player->clean();
 }
