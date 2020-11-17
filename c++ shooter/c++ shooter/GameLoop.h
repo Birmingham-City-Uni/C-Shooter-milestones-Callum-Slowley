@@ -1,6 +1,6 @@
 #pragma once
 
-#include "BulletManager.h"
+//#include "BulletManager.h"
 #include <SDL.h>
 #include <iostream>
 
@@ -34,5 +34,5 @@ private:
 
 	bool keyDown[512];
 
-	BulletManager* bm;
+	//BulletManager* bm;
 };
