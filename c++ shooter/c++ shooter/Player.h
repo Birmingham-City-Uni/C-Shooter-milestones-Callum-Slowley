@@ -12,11 +12,15 @@ public:
 	void update();
 	void draw();
 	void clean();
+	float getAngle() const {
+		return rotationAngle;
+	}
 
 private:
 	SDL_Texture* player;
 	SDL_Rect src;
 	SDL_Rect pos;
 	int speed;
+	float rotationAngle;
 
 };

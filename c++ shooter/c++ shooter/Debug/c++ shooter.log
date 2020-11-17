@@ -1,2 +1,62 @@
-﻿  Player.cpp
-  c++ shooter.vcxproj -> E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\Debug\c++ shooter.exe
+﻿  GameLoop.cpp
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(32,34): warning C4018: '>': signed/unsigned mismatch
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(41,1): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(42,1): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(53,23): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(53,23): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(53,28): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(53,28): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(54,21): error C2653: 'GameLoop': is not a class or namespace name
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(54,31): error C2065: 'renderer': undeclared identifier
+  Main.cpp
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(32,34): warning C4018: '>': signed/unsigned mismatch
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(41,1): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(42,1): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(53,23): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(53,23): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(53,28): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(53,28): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(54,21): error C2653: 'GameLoop': is not a class or namespace name
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(54,31): error C2065: 'renderer': undeclared identifier
+  Map.cpp
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(27,19): error C2653: 'TextureManager': is not a class or namespace name
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(27,35): error C3861: 'LoadTexture': identifier not found
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(32,34): warning C4018: '>': signed/unsigned mismatch
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(41,1): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(42,1): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(53,23): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(53,23): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(53,28): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(53,28): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(54,21): error C2653: 'GameLoop': is not a class or namespace name
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(54,31): error C2065: 'renderer': undeclared identifier
+  Player.cpp
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(23,15): error C2061: syntax error: identifier 'Player'
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(65,8): error C2143: syntax error: missing ';' before '*'
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(65,8): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(65,16): error C2238: unexpected token(s) preceding ';'
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(23,43): error C2065: 'player': undeclared identifier
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(23,36): error C2614: 'BulletManager': illegal member initialization: 'player' is not a base or member
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(32,34): warning C4018: '>': signed/unsigned mismatch
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(33,47): error C2065: 'player': undeclared identifier
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(41,1): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(42,1): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(53,23): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(53,23): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(53,28): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(53,28): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(54,21): error C2653: 'GameLoop': is not a class or namespace name
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(54,31): error C2065: 'renderer': undeclared identifier
+  TextureManager.cpp
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(27,19): error C2653: 'TextureManager': is not a class or namespace name
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(27,35): error C3861: 'LoadTexture': identifier not found
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(32,34): warning C4018: '>': signed/unsigned mismatch
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(41,1): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(42,1): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(53,23): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(53,23): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(53,28): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(53,28): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(54,21): error C2653: 'GameLoop': is not a class or namespace name
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(54,31): error C2065: 'renderer': undeclared identifier
+  Generating Code...

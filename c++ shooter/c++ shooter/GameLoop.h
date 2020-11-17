@@ -1,5 +1,6 @@
 #pragma once
 
+#include "BulletManager.h"
 #include <SDL.h>
 #include <iostream>
 
@@ -32,4 +33,6 @@ private:
 	SDL_Window* window;
 
 	bool keyDown[512];
+
+	BulletManager* bm;
 };

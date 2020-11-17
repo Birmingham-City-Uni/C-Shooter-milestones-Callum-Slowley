@@ -16,7 +16,7 @@ Player::Player()
 	pos.x = 10*32;
 	pos.y = 10*32;
 	speed = 5;
-	
+	rotationAngle = 0.0f;
 }
 
 Player::~Player()
