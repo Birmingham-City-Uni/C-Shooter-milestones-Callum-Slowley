@@ -1,7 +1,12 @@
 ﻿  GameLoop.cpp
-E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\GameLoop.cpp(72,2): error C2065: 'bm': undeclared identifier
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\GameLoop.cpp(34,61): error C2664: 'Score::Score(const std::string &,int,std::string &,const SDL_Color &)': cannot convert argument 3 from 'const char [5]' to 'std::string &'
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\Score.h(8,2): message : see declaration of 'Score::Score'
   Main.cpp
-  Map.cpp
-  Player.cpp
+  Score.cpp
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\Score.cpp(7,63): error C2664: 'SDL_Texture *Score::loadFont(std::string &,int,std::string &,const SDL_Color &)': cannot convert argument 1 from 'const std::string' to 'std::string &'
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\Score.cpp(7,26): message : Conversion loses qualifiers
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\Score.h(13,22): message : see declaration of 'Score::loadFont'
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\Score.cpp(22,1): error C2511: 'SDL_Texture *Score::loadFont(const std::string &,int,std::string &,const SDL_Color &)': overloaded member function not found in 'Score'
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\Score.h(6): message : see declaration of 'Score'
   TextureManager.cpp
   Generating Code...

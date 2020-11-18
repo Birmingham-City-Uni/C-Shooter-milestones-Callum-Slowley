@@ -1,11 +1,15 @@
 #include "GameLoop.h"
 #include "Map.h"
 #include "Player.h"
+#include "Score.h"
 #include <iostream>
+#include <SDL_ttf.h>
 
 SDL_Renderer* GameLoop::renderer = nullptr;
 Map* map;
 Player* player;
+Score* score;
+
 
 GameLoop::GameLoop() {
 	window = nullptr;
@@ -27,9 +31,14 @@ bool GameLoop::init() {
 		800, 640,
 		SDL_WINDOW_SHOWN
 	);
+	score= new Score("/arial.tff", 30, "test", { 255,0,0,255 });
 
 	if (!window) {
 		std::cerr << "Could not create a window through SDL: " << SDL_GetError();
+		return false;
+	}
+	if (TTF_Init()==-1) {
+		std::cerr << "Could not initalise SDL.ttf: " << SDL_GetError();
 		return false;
 	}
 
@@ -85,6 +94,7 @@ void GameLoop::draw()
 	SDL_RenderClear(GameLoop::renderer);
 	map->Draw();
 	player->draw();
+	score->draw(20,20);
 	//bm->draw();
 	SDL_RenderPresent(GameLoop::renderer);
 	SDL_Delay(16);
@@ -92,5 +102,6 @@ void GameLoop::draw()
 
 void GameLoop::clean() {
 	player->clean();
+	score->clear();
 	//bm->clean();
 }

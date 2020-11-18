@@ -1,4 +1,5 @@
 #include "GameLoop.h"
+#include "Score.h"
 
 //this can be accessed in any cpp file by adding "extern GameLoop * gameLoop"
 GameLoop* gameLoop;
