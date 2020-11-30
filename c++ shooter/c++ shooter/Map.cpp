@@ -27,7 +27,6 @@ int level1[20][25] = {
 Map::Map()
 {
 	grass = TextureManager::LoadTexture("Grass.png");
-	if (grass == nullptr) std::cout << IMG_GetError() << "\n";
 	wall = TextureManager::LoadTexture("Wall.png");
 	wallTop = TextureManager::LoadTexture("WallTop.png");
 

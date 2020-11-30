@@ -31,8 +31,7 @@ bool GameLoop::init() {
 		800, 640,
 		SDL_WINDOW_SHOWN
 	);
-	string scoreVal = "Score: ";
-	score= new Score("arial.ttf", 30, scoreVal, { 255,0,0,255 });
+
 
 	if (!window) {
 		std::cerr << "Could not create a window through SDL: " << SDL_GetError();
@@ -54,6 +53,8 @@ bool GameLoop::init() {
 		keyDown[i] = false;
 	}
 
+	string scoreVal = "Score: ";
+	score = new Score("arial.ttf", 30, scoreVal, { 255,0,0,255 }, GameLoop::renderer);
 	map = new Map();
 	player = new Player();
 	//bm = new BulletManager(player);
