@@ -6,6 +6,7 @@ extern GameLoop* gameLoop;
 
 Player::Player()
 {
+	//player pos and scale 
 	player = TextureManager::LoadTexture("Player.png");
 	src.x = 0;
 	src.y = 0;
@@ -25,6 +26,7 @@ Player::~Player()
 
 void Player::update()
 {
+	//player moved based on what key is pressed
 	if (gameLoop->getKeyDown(SDL_SCANCODE_RIGHT)) {
 		this->pos.x += 1 * speed;
 	}
@@ -41,6 +43,7 @@ void Player::update()
 
 void Player::draw()
 {
+	//the player is drawn
 	TextureManager::Draw(player, src, pos);
 }
 

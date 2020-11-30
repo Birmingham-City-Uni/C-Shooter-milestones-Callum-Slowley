@@ -2,6 +2,7 @@
 #include <SDL_image.h>
 #include "TextureManager.h"
 
+//map data
 int level1[20][25] = {
 	{2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2},
 	{2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2},
@@ -26,12 +27,14 @@ int level1[20][25] = {
 };
 Map::Map()
 {
+	//textures loaded
 	grass = TextureManager::LoadTexture("Grass.png");
 	wall = TextureManager::LoadTexture("Wall.png");
 	wallTop = TextureManager::LoadTexture("WallTop.png");
 
+	//level loaded
 	Load(level1);
-
+	//used for pos and scale
 	src.x = 0;
 	src.y = 0;
 	src.w = 32;
@@ -44,6 +47,7 @@ Map::~Map()
 {
 }
 
+//map being loaded
 void Map::Load(int arr[20][25])
 {
 	for (int row = 0; row < 20; row++) {
@@ -55,6 +59,7 @@ void Map::Load(int arr[20][25])
 
 void Map::Draw()
 {
+	//drawing the map using switch cases
 	int tile = 0;
 
 	for (int row = 0; row < 20; row++) {
