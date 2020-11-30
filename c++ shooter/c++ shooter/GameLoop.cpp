@@ -54,7 +54,7 @@ bool GameLoop::init() {
 	}
 
 	string scoreVal = "Score: ";
-	score = new Score("arial.ttf", 30, scoreVal, { 255,0,0,255 }, GameLoop::renderer);
+	score = new Score( 30,GameLoop::renderer);
 	map = new Map();
 	player = new Player();
 	//bm = new BulletManager(player);
@@ -87,6 +87,7 @@ bool GameLoop::processInput()
 void GameLoop::update()
 {
 	player->update();
+	score->update();
 	//bm->update();
 	SDL_RenderClear(GameLoop::renderer);
 }
