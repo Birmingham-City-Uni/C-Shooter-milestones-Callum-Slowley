@@ -82,7 +82,7 @@ bool GameLoop::processInput()
 		}
 	}
 	float angle = player->getAngle();
-	bm->processInput(keyDown, angle);
+	bm->processInput(keyDown, angle, player->getX(), player->getY());
 	return true;
 }
 

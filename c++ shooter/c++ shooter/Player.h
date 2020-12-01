@@ -15,6 +15,12 @@ public:
 	float getAngle() const {
 		return rotationAngle;
 	}
+	float getX() {
+		return pos.x;
+	}
+	float getY() {
+		return pos.y;
+	}
 
 private:
 	SDL_Texture* player;

@@ -27,11 +27,11 @@ public:
 		bulletTexture = bullet;
 	}
 
-	void processInput(bool* keyDown,float playerAngle) {
+	void processInput(bool* keyDown,float playerAngle, float playerx, float playery) {
 		if (keyDown[SDL_SCANCODE_SPACE]) {
 			if ((SDL_GetTicks() - lastShot) > SHOOT_TIMER_MS) {
 				std::cout << "bullet shot"; // used for testing 
-				bullets.push_back(Bullet{ 315.0f, 230.0f,playerAngle, 0.0f });
+				bullets.push_back(Bullet{ playerx,playery,playerAngle, 0.0f });
 				lastShot = SDL_GetTicks();
 			}
 		}
