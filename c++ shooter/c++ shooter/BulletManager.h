@@ -47,11 +47,11 @@ public:
 		bullets.erase(remove, bullets.end());
 	}
 
-	void draw() {
+	void draw(SDL_Renderer* renderer) {
 		SDL_Point center = { 5, 5 };
 		for (auto& b : bullets) {
 			SDL_Rect dest = { b.x, b.y, 10, 10 };
-			SDL_RenderCopyEx(GameLoop::renderer, bulletTexture, 0, &dest, b.rotation, &center, SDL_FLIP_NONE);
+			SDL_RenderCopyEx(renderer, bulletTexture, 0, &dest, b.rotation, &center, SDL_FLIP_NONE);
 		}
 	}
 

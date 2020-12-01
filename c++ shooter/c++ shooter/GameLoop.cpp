@@ -57,8 +57,8 @@ bool GameLoop::init() {
 	score = new Score( 30,GameLoop::renderer);
 	map = new Map();
 	player = new Player();
-	//bm = new BulletManager(player);
-	//bm->init();
+	bm = new BulletManager(player);
+	bm->init();
 	return true;
 }
 
@@ -80,7 +80,7 @@ bool GameLoop::processInput()
 			}
 		}
 	}
-	//bm->processInput(keyDown);
+	bm->processInput(keyDown);
 	return true;
 }
 
@@ -88,7 +88,7 @@ void GameLoop::update()
 {
 	player->update();
 	score->update();
-	//bm->update();
+	bm->update();
 	SDL_RenderClear(GameLoop::renderer);
 }
 
@@ -98,7 +98,7 @@ void GameLoop::draw()
 	map->Draw();
 	player->draw();
 	score->draw(20,20);
-	//bm->draw();
+	bm->draw(GameLoop::renderer);
 	SDL_RenderPresent(GameLoop::renderer);
 	SDL_Delay(16);
 }
@@ -106,5 +106,5 @@ void GameLoop::draw()
 void GameLoop::clean() {
 	player->clean();
 	score->clear();
-	//bm->clean();
+	bm->clean();
 }
