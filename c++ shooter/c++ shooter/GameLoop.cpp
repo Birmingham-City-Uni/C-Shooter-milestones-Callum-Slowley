@@ -57,8 +57,9 @@ bool GameLoop::init() {
 	score = new Score( 30,GameLoop::renderer);
 	map = new Map();
 	player = new Player();
-	bm = new BulletManager(player);
-	bm->init();
+	bm = new BulletManager();
+	//done with the player icon so its easier to see for now
+	bm->init(TextureManager::LoadTexture("Player.png"));
 	return true;
 }
 
@@ -80,7 +81,8 @@ bool GameLoop::processInput()
 			}
 		}
 	}
-	bm->processInput(keyDown);
+	float angle = player->getAngle();
+	bm->processInput(keyDown, angle);
 	return true;
 }
 

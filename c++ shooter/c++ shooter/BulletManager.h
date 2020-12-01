@@ -7,6 +7,7 @@
 #include <vector>
 #include <math.h>
 #include <algorithm>
+#include <iostream>
 #include "TextureManager.h"
 #include "Player.h"
 
@@ -20,17 +21,17 @@ struct Bullet {
 
 class BulletManager {
 public:
-	BulletManager( Player* player) :  player(player) {}
 
-	void init() {
+	void init(SDL_Texture* bullet) {
 		//load the texture for the lazer
-		bulletTexture = TextureManager::LoadTexture("Player.png");
+		bulletTexture = bullet;
 	}
 
-	void processInput(bool* keyDown) {
+	void processInput(bool* keyDown,float playerAngle) {
 		if (keyDown[SDL_SCANCODE_SPACE]) {
-			if (SDL_GetTicks() - lastShot > SHOOT_TIMER_MS) {
-				bullets.push_back(Bullet{ 315.0f, 230.0f, player->getAngle(), 0.0f });
+			if ((SDL_GetTicks() - lastShot) > SHOOT_TIMER_MS) {
+				std::cout << "bullet shot"; // used for testing 
+				bullets.push_back(Bullet{ 315.0f, 230.0f,playerAngle, 0.0f });
 				lastShot = SDL_GetTicks();
 			}
 		}
@@ -61,8 +62,6 @@ public:
 private:
 	SDL_Texture* bulletTexture;
 	vector<Bullet> bullets;
-	//need a reference to the player to get the angle
-	Player* player;
 
 	//time limit between shots
 	const int SHOOT_TIMER_MS = 300;
