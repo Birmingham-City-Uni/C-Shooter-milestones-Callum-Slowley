@@ -1,4 +1,6 @@
 ﻿  GameLoop.cpp
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\Player.h(19,13): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\Player.h(22,13): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
 E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(32,36): warning C4018: '>': signed/unsigned mismatch
 E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(42,1): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
 E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(43,1): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
@@ -7,6 +9,8 @@ E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(
 E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(54,28): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
 E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(54,28): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
   Main.cpp
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\Player.h(19,13): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\Player.h(22,13): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
 E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(32,36): warning C4018: '>': signed/unsigned mismatch
 E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(42,1): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
 E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(43,1): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
@@ -15,6 +19,8 @@ E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(
 E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(54,28): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
 E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(54,28): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
   Map.cpp
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\Player.h(19,13): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\Player.h(22,13): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
 E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(32,36): warning C4018: '>': signed/unsigned mismatch
 E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(42,1): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
 E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(43,1): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
@@ -30,7 +36,11 @@ E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(
 E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(54,23): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
 E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(54,28): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
 E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(54,28): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\Player.h(19,13): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\Player.h(22,13): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
   Score.cpp
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\Player.h(19,13): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\Player.h(22,13): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
 E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(32,36): warning C4018: '>': signed/unsigned mismatch
 E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(42,1): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
 E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(43,1): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
@@ -39,6 +49,8 @@ E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(
 E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(54,28): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
 E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(54,28): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
   TextureManager.cpp
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\Player.h(19,13): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\Player.h(22,13): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
 E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(32,36): warning C4018: '>': signed/unsigned mismatch
 E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(42,1): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
 E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(43,1): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
