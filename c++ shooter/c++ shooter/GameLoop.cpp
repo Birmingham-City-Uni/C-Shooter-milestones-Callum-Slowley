@@ -88,7 +88,7 @@ bool GameLoop::processInput()
 
 void GameLoop::update()
 {
-	player->update();
+	player->update(map->map);
 	score->update();
 	bm->update();
 	SDL_RenderClear(GameLoop::renderer);

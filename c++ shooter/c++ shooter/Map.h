@@ -10,6 +10,9 @@ public:
 	//methods to load and draw the map
 	void Load(int arr[20][25]);
 	void Draw();
+	
+	//map size
+	int map[20][25];
 
 private:
 	//setting up varibles to use in the map scripts
@@ -18,6 +21,5 @@ private:
 	SDL_Texture* grass;
 	SDL_Texture* wall;
 	SDL_Texture* wallTop;
-	//map size
-	int map[20][25];
+	SDL_Texture* chest;
 };

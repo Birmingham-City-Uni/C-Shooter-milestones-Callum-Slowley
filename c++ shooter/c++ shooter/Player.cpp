@@ -1,8 +1,9 @@
 #include "Player.h"
 #include "TextureManager.h"
+#include <vector>
 
 extern GameLoop* gameLoop;
-
+extern Score* score;
 
 Player::Player()
 {
@@ -24,8 +25,12 @@ Player::~Player()
 {
 }
 
-void Player::update()
+void Player::update(int map[20][25])
 {
+	//used for collions on the map
+	int oldX= this->pos.x;
+	int oldY = this->pos.y;
+
 	//player moved based on what key is pressed
 	if (gameLoop->getKeyDown(SDL_SCANCODE_RIGHT)) {
 		this->pos.x += 1 * speed;
@@ -38,6 +43,33 @@ void Player::update()
 	}
 	if (gameLoop->getKeyDown(SDL_SCANCODE_DOWN)) {
 		this->pos.y += 1* speed;
+	}
+
+	//checking if the player collides with tiles that are set that you cant move through them
+	SDL_Rect playerPos = { this->pos.x,this->pos.y,32,32 };
+	//goes through my whole map and checks to see if there is any impassible tiles
+	for(int i =0;i<20;i++)
+	{
+		for (int j = 0; j < 25; j++)
+		{
+			//if the tile value is greater the 0 its an impassible tile
+			if (map[i][j] > 0)
+			{
+				SDL_Rect mapTile = { j * 32,i * 32,32,32 };
+				//if col occours players old pos is rest
+				if (SDL_HasIntersection(&playerPos, &mapTile)) 
+				{
+					//3 is set to the chest
+					if (map[i][j] == 3) {
+						score->scoreValue += 50;
+						map[i][j] = 0;
+					}
+
+					this->pos.x = oldX;
+					this->pos.y = oldY;
+				}
+			}
+		}
 	}
 }
 

@@ -18,8 +18,6 @@ Score::Score( int newfontSize, SDL_Renderer* newrenderer)
 
 void Score::update()
 {
-	//score is updated over time 
-	scoreValue++;
 	scoreText = "Score: " +to_string(scoreValue);
 	scoreTexture = loadFont(fontSize, scoreText, renderer);
 }

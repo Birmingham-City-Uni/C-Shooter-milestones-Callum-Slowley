@@ -3,13 +3,14 @@
 #include <SDL.h>
 #include <SDL_image.h>
 #include "GameLoop.h"
+#include "Score.h"
 
 class Player {
 public:
 	Player();
 	~Player();
 	void init();
-	void update();
+	void update(int map[20][25]);
 	void draw();
 	void clean();
 	float getAngle() const {

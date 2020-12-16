@@ -11,12 +11,12 @@ public:
 	void draw(int x, int y)const;
 	void clear();
 
+	int scoreValue;
 	static SDL_Texture* loadFont( int fontSize, std::string& scoreValue, SDL_Renderer* renderer);
 private:
 	int fontSize;
 	SDL_Renderer* renderer;
 	SDL_Texture* scoreTexture = nullptr;
 	SDL_Rect scoreRect;
-	int scoreValue;
 	std::string scoreText;
 };
