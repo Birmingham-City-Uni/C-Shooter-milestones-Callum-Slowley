@@ -10,6 +10,7 @@ public:
 	//methods to load and draw the map
 	void Load(int arr[20][25]);
 	void Draw();
+	void Update();
 	
 	//map size
 	int map[20][25];
@@ -22,4 +23,9 @@ private:
 	SDL_Texture* wall;
 	SDL_Texture* wallTop;
 	SDL_Texture* chest;
+	SDL_Texture* waves;
+	//animation frames
+	int animationFrame;
+	int framesPerRow;
+	long int lastFrame;
 };

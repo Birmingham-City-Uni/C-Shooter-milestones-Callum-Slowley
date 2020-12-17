@@ -88,6 +88,7 @@ bool GameLoop::processInput()
 
 void GameLoop::update()
 {
+	map->Update();
 	player->update(map->map);
 	score->update();
 	bm->update();
