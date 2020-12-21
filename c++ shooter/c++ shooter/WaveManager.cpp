@@ -10,11 +10,12 @@ WaveManager::~WaveManager()
 
 void WaveManager::Update()
 {
-	if ((SDL_GetTicks() - timeSinceLastSpawn) > spawnTimes)
+	if ((SDL_GetTicks() - timeSinceLastSpawn) > spawnTimes && nextWave)
 	{
 		currentWave++;
 		for (int i = 0; i < currentWave; i++) {
 			em->spawning();
+			nextWave = false;
 		}
 		timeSinceLastSpawn = SDL_GetTicks();
 	}

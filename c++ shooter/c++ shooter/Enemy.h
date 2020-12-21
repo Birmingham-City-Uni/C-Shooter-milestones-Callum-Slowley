@@ -12,7 +12,8 @@ public:
 	void update(int map[20][25]);
 	void draw();
 	void clean();
-
+	//temp
+	bool ypos;
 	SDL_Rect pos;
 private:
 	SDL_Texture* enemyTexture;

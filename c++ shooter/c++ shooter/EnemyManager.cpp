@@ -1,7 +1,9 @@
 #include "EnemyManager.h"
 #include "Enemy.h"
+#include "WaveManager.h"
 #include "Map.h"
 extern Map* map;
+extern WaveManager* wm;
 
 EnemyManager::EnemyManager()
 {
@@ -23,11 +25,18 @@ void EnemyManager::spawning()
 
 void EnemyManager::update()
 {
+	//used to check if the array is empty if it is it stops the whole function
+	if (enemyArray.size() == 0) 
+	{
+		wm->nextWave = true;
+		return;
+	}
 	//itterating through all elements in the array so that they all update
 	for (int i=0; i < enemyArray.size(); i++)
 	{
 		enemyArray[i].update(map->map);
 	}
+
 }
 
 void EnemyManager::draw()

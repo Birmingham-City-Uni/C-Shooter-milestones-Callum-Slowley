@@ -10,7 +10,8 @@ Enemy::Enemy()
 	src.h = 32;
 	pos.w = 32;
 	pos.h = 32;
-	speed = 5;
+	speed = 2;
+	ypos = true;
 }
 
 Enemy::~Enemy()
@@ -23,6 +24,19 @@ void Enemy::update(int map[20][25])
 	//used for collions on the map
 	int oldX = this->pos.x;
 	int oldY = this->pos.y;
+	if (ypos==true) {
+		pos.y += speed;
+	}
+	if (ypos==false) {
+		pos.y -= speed;
+	}
+
+	if (pos.y >= 18 * 32) {
+		ypos = false;
+	}
+	if (pos.y <= 64) {
+		ypos = true;
+	}
 
 	//checking if the Enemy collides with tiles that are set that you cant move through them
 	SDL_Rect enemyPos = { this->pos.x,this->pos.y,32,32 };
