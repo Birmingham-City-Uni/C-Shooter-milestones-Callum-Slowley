@@ -13,10 +13,10 @@ public:
 	void draw();
 	void clean();
 
+	SDL_Rect pos;
 private:
 	SDL_Texture* enemyTexture;
 	SDL_Rect src;
-	SDL_Rect pos;
 	int speed;
 	int maxHealth;
 	int currentHealth;

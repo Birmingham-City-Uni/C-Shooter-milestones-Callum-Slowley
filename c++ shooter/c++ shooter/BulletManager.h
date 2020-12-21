@@ -43,7 +43,7 @@ public:
 			b.y -= cos(b.rotation * PI / 180.0f) * BULLET_VELOCITY;
 			b.distance += BULLET_VELOCITY;
 		}
-		//remove bullet after they have travelled approx 1000 pixels. this code could be called less frequently for efficiency
+		//remove bullet after they have travelled approx 1000 pixels
 		auto remove = std::remove_if(bullets.begin(), bullets.end(), [](const Bullet& b) { return b.distance > 1000; });
 		bullets.erase(remove, bullets.end());
 	}

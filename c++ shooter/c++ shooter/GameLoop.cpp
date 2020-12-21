@@ -2,6 +2,8 @@
 #include "Map.h"
 #include "Player.h"
 #include "Score.h"
+#include "EnemyManager.h"
+#include "WaveManager.h"
 #include <iostream>
 #include <SDL_ttf.h>
 
@@ -9,6 +11,8 @@ SDL_Renderer* GameLoop::renderer = nullptr;
 Map* map;
 Player* player;
 Score* score;
+EnemyManager* em;
+WaveManager* wm;
 
 
 GameLoop::GameLoop() {
@@ -52,11 +56,14 @@ bool GameLoop::init() {
 	for (int i = 0; i < 512; i++) {
 		keyDown[i] = false;
 	}
-
+	
 	string scoreVal = "Score: ";
 	score = new Score( 30,GameLoop::renderer);
 	map = new Map();
 	player = new Player();
+	em = new EnemyManager();
+	wm = new WaveManager();
+	wm->em = em;
 	bm = new BulletManager();
 	//done with the player icon so its easier to see for now
 	bm->init(TextureManager::LoadTexture("Player.png"));
@@ -90,6 +97,8 @@ void GameLoop::update()
 {
 	map->Update();
 	player->update(map->map);
+	em->update();
+	wm->Update();
 	score->update();
 	bm->update();
 	SDL_RenderClear(GameLoop::renderer);
@@ -100,6 +109,7 @@ void GameLoop::draw()
 	SDL_RenderClear(GameLoop::renderer);
 	map->Draw();
 	player->draw();
+	em->draw();
 	score->draw(20,20);
 	bm->draw(GameLoop::renderer);
 	SDL_RenderPresent(GameLoop::renderer);
