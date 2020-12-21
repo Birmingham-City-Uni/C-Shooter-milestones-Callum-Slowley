@@ -37,7 +37,7 @@ void Score::clear()
 SDL_Texture* Score::loadFont(int fontSize, std::string& scoreValue,SDL_Renderer* renderer)
 {
 	//font loaded
-	TTF_Font* font = TTF_OpenFont("arial.ttf", fontSize);
+ 	TTF_Font* font = TTF_OpenFont("arial.ttf", fontSize);
 	if (!font) {
 		std::cerr << "font failed to load: " <<  SDL_GetError() << "\n";
 	}

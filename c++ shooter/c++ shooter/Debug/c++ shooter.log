@@ -1,4 +1,4 @@
-﻿  Map.cpp
+﻿  Score.cpp
 E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\Player.h(20,13): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
 E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\Player.h(23,13): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
 E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(32,36): warning C4018: '>': signed/unsigned mismatch
