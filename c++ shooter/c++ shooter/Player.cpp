@@ -19,6 +19,9 @@ Player::Player()
 	pos.y = 10*32;
 	speed = 5;
 	rotationAngle = 0.0f;
+	hit = false;
+	maxHp = 100;
+	currentHp = maxHp;
 
 	boundingSphere = new Sphere(pos.x + (pos.w / 2), pos.y + (pos.h / 2), pos.w / 2);
 }
@@ -78,6 +81,11 @@ void Player::update(int map[20][25])
 				}
 			}
 		}
+	}
+	if (hit) {
+		currentHp -= 3;
+		cout << "current HP: "<<currentHp;
+		hit = false;
 	}
 }
 

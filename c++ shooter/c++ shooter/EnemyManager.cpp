@@ -2,8 +2,10 @@
 #include "Enemy.h"
 #include "WaveManager.h"
 #include "Map.h"
+#include<iostream>
 extern Map* map;
 extern WaveManager* wm;
+extern Player* player;
 
 EnemyManager::EnemyManager()
 {
@@ -35,7 +37,18 @@ void EnemyManager::update()
 	for (int i=0; i < enemyArray.size(); i++)
 	{
 		enemyArray[i].update(map->map);
+
+		if (enemyArray[i].boundingSphere->CollisionWithSphere(*player->boundingSphere)) {
+			cout << "collison with player ";
+			player->hit= true;
+		}
 	}
+	auto remove = std::remove_if(enemyArray.begin(), enemyArray.end(), [](const Enemy& e)
+		{ 
+			
+			return e.boundingSphere->CollisionWithSphere(*player->boundingSphere); 
+		});
+	enemyArray.erase(remove, enemyArray.end());
 
 }
 

@@ -23,6 +23,11 @@ public:
 	float getY() {
 		return pos.y;
 	}
+	//made public to be accessed by the health bar
+	Sphere* boundingSphere;
+	bool hit = false;
+	int maxHp;
+	int currentHp;
 
 private:
 	SDL_Texture* player;
@@ -30,6 +35,6 @@ private:
 	SDL_Rect pos;
 	int speed;
 	float rotationAngle;
-	Sphere* boundingSphere;
+
 
 };

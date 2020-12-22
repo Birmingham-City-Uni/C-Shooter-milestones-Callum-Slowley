@@ -1,4 +1,5 @@
 #include "Enemy.h"
+extern Player* player;
 
 Enemy::Enemy()
 {
