@@ -4,6 +4,7 @@
 #include "Score.h"
 #include "EnemyManager.h"
 #include "WaveManager.h"
+#include <vector>
 #include <iostream>
 #include <SDL_ttf.h>
 

@@ -2,6 +2,7 @@
 
 #include <SDL.h>
 #include <SDL_image.h>
+#include "Sphere.h"
 #include "GameLoop.h"
 
 class Enemy {
@@ -15,6 +16,7 @@ public:
 	//temp
 	bool ypos;
 	SDL_Rect pos;
+
 private:
 	SDL_Texture* enemyTexture;
 	SDL_Rect src;
@@ -22,4 +24,5 @@ private:
 	int maxHealth;
 	int currentHealth;
 	bool canSplit;
+	Sphere* boundingSphere;
 };

@@ -4,6 +4,7 @@
 #include <SDL_image.h>
 #include "GameLoop.h"
 #include "Score.h"
+#include "Sphere.h"
 
 class Player {
 public:
@@ -29,5 +30,6 @@ private:
 	SDL_Rect pos;
 	int speed;
 	float rotationAngle;
+	Sphere* boundingSphere;
 
 };

@@ -1,10 +1,10 @@
 #include "Player.h"
 #include "TextureManager.h"
+#include "Sphere.h"
 #include <vector>
 
 extern GameLoop* gameLoop;
 extern Score* score;
-
 Player::Player()
 {
 	//player pos and scale 
@@ -19,6 +19,8 @@ Player::Player()
 	pos.y = 10*32;
 	speed = 5;
 	rotationAngle = 0.0f;
+
+	boundingSphere = new Sphere(pos.x + (pos.w / 2), pos.y + (pos.h / 2), pos.w / 2);
 }
 
 Player::~Player()
@@ -45,6 +47,9 @@ void Player::update(int map[20][25])
 		this->pos.y += 1* speed;
 	}
 
+	this->boundingSphere->x = pos.x;
+	this->boundingSphere->y = pos.y;
+
 	//checking if the player collides with tiles that are set that you cant move through them
 	SDL_Rect playerPos = { this->pos.x,this->pos.y,32,32 };
 	//goes through my whole map and checks to see if there is any impassible tiles
@@ -67,6 +72,9 @@ void Player::update(int map[20][25])
 
 					this->pos.x = oldX;
 					this->pos.y = oldY;
+
+					this->boundingSphere->x = pos.x;
+					this->boundingSphere->y = pos.y;
 				}
 			}
 		}

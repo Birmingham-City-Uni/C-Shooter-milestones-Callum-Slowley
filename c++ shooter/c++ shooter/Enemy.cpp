@@ -12,6 +12,7 @@ Enemy::Enemy()
 	pos.h = 32;
 	speed = 2;
 	ypos = true;
+	boundingSphere = new Sphere(pos.x + (pos.w / 2), pos.y + (pos.h / 2), pos.w / 2);
 }
 
 Enemy::~Enemy()
@@ -37,6 +38,8 @@ void Enemy::update(int map[20][25])
 	if (pos.y <= 64) {
 		ypos = true;
 	}
+	this->boundingSphere->x = pos.x;
+	this->boundingSphere->y = pos.y;
 
 	//checking if the Enemy collides with tiles that are set that you cant move through them
 	SDL_Rect enemyPos = { this->pos.x,this->pos.y,32,32 };
@@ -54,6 +57,8 @@ void Enemy::update(int map[20][25])
 				{
 					this->pos.x = oldX;
 					this->pos.y = oldY;
+					this->boundingSphere->x = pos.x;
+					this->boundingSphere->y = pos.y;
 				}
 			}
 		}
