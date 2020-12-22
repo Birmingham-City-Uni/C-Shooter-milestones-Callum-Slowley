@@ -4,6 +4,7 @@
 #include "Score.h"
 #include "EnemyManager.h"
 #include "WaveManager.h"
+#include "HpBar.h"
 #include <vector>
 #include <iostream>
 #include <SDL_ttf.h>
@@ -14,6 +15,7 @@ Player* player;
 Score* score;
 EnemyManager* em;
 WaveManager* wm;
+HpBar* hp;
 
 
 GameLoop::GameLoop() {
@@ -60,6 +62,7 @@ bool GameLoop::init() {
 	
 	string scoreVal = "Score: ";
 	score = new Score( 30,GameLoop::renderer);
+	hp = new HpBar();
 	map = new Map();
 	player = new Player();
 	em = new EnemyManager();
@@ -112,6 +115,7 @@ void GameLoop::draw()
 	player->draw();
 	em->draw();
 	score->draw(20,20);
+	hp->draw();
 	bm->draw(GameLoop::renderer);
 	SDL_RenderPresent(GameLoop::renderer);
 	SDL_Delay(16);

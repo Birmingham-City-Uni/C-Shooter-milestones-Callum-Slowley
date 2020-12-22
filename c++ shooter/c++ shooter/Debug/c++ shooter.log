@@ -1,4 +1,4 @@
-﻿  EnemyManager.cpp
+﻿  HpBar.cpp
 E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\Sphere.h(13,20): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
 E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\Player.h(21,13): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
 E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\Player.h(24,13): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
@@ -9,6 +9,5 @@ E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(
 E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(54,23): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
 E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(54,28): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
 E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(54,28): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\EnemyManager.cpp(37,18): warning C4018: '<': signed/unsigned mismatch
-E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\EnemyManager.cpp(58,18): warning C4018: '<': signed/unsigned mismatch
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\HpBar.cpp(23,14): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
   c++ shooter.vcxproj -> E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\Debug\c++ shooter.exe
