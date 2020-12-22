@@ -10,6 +10,7 @@
 #include <iostream>
 #include "TextureManager.h"
 #include "Player.h"
+#include "Sphere.h"
 
 #define PI 3.14159265
 
@@ -17,6 +18,7 @@ using namespace std;
 
 struct Bullet {
 	float x, y, rotation, distance;
+	Sphere* boundingSphere;
 };
 
 class BulletManager {
@@ -46,6 +48,8 @@ public:
 		//remove bullet after they have travelled approx 1000 pixels
 		auto remove = std::remove_if(bullets.begin(), bullets.end(), [](const Bullet& b) { return b.distance > 1000; });
 		bullets.erase(remove, bullets.end());
+
+
 	}
 
 	void draw(SDL_Renderer* renderer) {
@@ -59,9 +63,10 @@ public:
 	void clean() {
 		SDL_DestroyTexture(this->bulletTexture);
 	}
+	vector<Bullet> bullets;
 private:
 	SDL_Texture* bulletTexture;
-	vector<Bullet> bullets;
+
 
 	//time limit between shots
 	const int SHOOT_TIMER_MS = 300;

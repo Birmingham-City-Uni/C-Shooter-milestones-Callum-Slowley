@@ -4,16 +4,18 @@
 #include <SDL_image.h>
 #include <vector>
 #include "Enemy.h"
+#include "BulletManager.h"
 
 class EnemyManager
 {
 public:
-	EnemyManager();
+	EnemyManager( );
 	~EnemyManager();
 	void spawning();
-	void update();
+	void update(vector<Bullet> bullets);
 	void draw();
-private:
 	vector<Enemy> enemyArray;
+private:
+
 };
 

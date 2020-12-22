@@ -64,13 +64,13 @@ bool GameLoop::init() {
 	score = new Score( 30,GameLoop::renderer);
 	hp = new HpBar();
 	map = new Map();
+	bm = new BulletManager();
 	player = new Player();
 	em = new EnemyManager();
 	wm = new WaveManager();
 	wm->em = em;
-	bm = new BulletManager();
 	//done with the player icon so its easier to see for now
-	bm->init(TextureManager::LoadTexture("Player.png"));
+	bm->init(TextureManager::LoadTexture("lazer.png"));
 	return true;
 }
 
@@ -101,7 +101,7 @@ void GameLoop::update()
 {
 	map->Update();
 	player->update(map->map);
-	em->update();
+	em->update(bm->bullets);
 	wm->Update();
 	score->update();
 	bm->update();

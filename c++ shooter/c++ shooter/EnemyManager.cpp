@@ -1,13 +1,18 @@
+
 #include "EnemyManager.h"
 #include "Enemy.h"
 #include "WaveManager.h"
 #include "Map.h"
+#include "BulletManager.h"
 #include<iostream>
+
 extern Map* map;
 extern WaveManager* wm;
 extern Player* player;
+extern Score* score;
 
-EnemyManager::EnemyManager()
+
+EnemyManager::EnemyManager( )
 {
 }
 
@@ -25,7 +30,7 @@ void EnemyManager::spawning()
 	enemyArray.push_back(newEnemy);
 }
 
-void EnemyManager::update()
+void EnemyManager::update(vector<Bullet> bullets)
 {
 	//used to check if the array is empty if it is it stops the whole function
 	if (enemyArray.size() == 0) 
@@ -33,6 +38,7 @@ void EnemyManager::update()
 		wm->nextWave = true;
 		return;
 	}
+
 	//itterating through all elements in the array so that they all update
 	for (int i=0; i < enemyArray.size(); i++)
 	{
@@ -48,7 +54,24 @@ void EnemyManager::update()
 			
 			return e.boundingSphere->CollisionWithSphere(*player->boundingSphere); 
 		});
+
 	enemyArray.erase(remove, enemyArray.end());
+	for (int i = 0; i < bullets.size(); i++) {
+		for (int j = 0; j < enemyArray.size(); j++) {
+			SDL_Rect bulletRect = { bullets[i].x,bullets[i].y,10,10 };
+			SDL_Rect enemyRect = { enemyArray[j].pos.x,enemyArray[j].pos.y,32,32 };
+			SDL_Rect nullRect;
+			if (SDL_IntersectRect(&bulletRect, &enemyRect, &nullRect)) {
+				bullets[i].distance = 1000;
+
+				enemyArray[j].pos.x = 0xCCCCCCCC; //checked later
+				score->scoreValue += 10;
+
+			}
+		}
+	}
+	auto eRemove = std::remove_if(enemyArray.begin(), enemyArray.end(), [](const Enemy& e) {return e.pos.x == 0xCCCCCCCC; });
+	enemyArray.erase(eRemove, enemyArray.end());
 
 }
 
