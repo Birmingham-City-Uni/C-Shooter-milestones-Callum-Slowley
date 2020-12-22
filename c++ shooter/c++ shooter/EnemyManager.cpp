@@ -12,8 +12,9 @@ extern Player* player;
 extern Score* score;
 
 
-EnemyManager::EnemyManager( )
+EnemyManager::EnemyManager(BulletManager* newbm)
 {
+	bm = newbm;
 }
 
 EnemyManager::~EnemyManager()
@@ -30,7 +31,7 @@ void EnemyManager::spawning()
 	enemyArray.push_back(newEnemy);
 }
 
-void EnemyManager::update(vector<Bullet> bullets)
+void EnemyManager::update()
 {
 	//used to check if the array is empty if it is it stops the whole function
 	if (enemyArray.size() == 0) 
@@ -56,14 +57,13 @@ void EnemyManager::update(vector<Bullet> bullets)
 		});
 
 	enemyArray.erase(remove, enemyArray.end());
-	for (int i = 0; i < bullets.size(); i++) {
+	for (int i = 0; i < bm->bullets.size(); i++) {
 		for (int j = 0; j < enemyArray.size(); j++) {
-			SDL_Rect bulletRect = { bullets[i].x,bullets[i].y,10,10 };
+			SDL_Rect bulletRect = { bm->bullets[i].x,bm->bullets[i].y,10,10 };
 			SDL_Rect enemyRect = { enemyArray[j].pos.x,enemyArray[j].pos.y,32,32 };
 			SDL_Rect nullRect;
-			if (SDL_IntersectRect(&bulletRect, &enemyRect, &nullRect)) {
-				bullets[i].distance = 1000;
-
+			if (SDL_IntersectRect(&bulletRect, &enemyRect, &nullRect)) {;
+				bm->bullets[i].distance = 1000;
 				enemyArray[j].pos.x = 0xCCCCCCCC; //checked later
 				score->scoreValue += 10;
 

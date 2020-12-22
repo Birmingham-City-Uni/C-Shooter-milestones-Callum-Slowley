@@ -9,13 +9,13 @@
 class EnemyManager
 {
 public:
-	EnemyManager( );
+	EnemyManager(BulletManager* bm);
 	~EnemyManager();
 	void spawning();
-	void update(vector<Bullet> bullets);
+	void update();
 	void draw();
 	vector<Enemy> enemyArray;
 private:
-
+	BulletManager* bm;
 };
 

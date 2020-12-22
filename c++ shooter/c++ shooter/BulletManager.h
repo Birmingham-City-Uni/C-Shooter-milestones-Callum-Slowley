@@ -63,6 +63,7 @@ public:
 	void clean() {
 		SDL_DestroyTexture(this->bulletTexture);
 	}
+
 	vector<Bullet> bullets;
 private:
 	SDL_Texture* bulletTexture;

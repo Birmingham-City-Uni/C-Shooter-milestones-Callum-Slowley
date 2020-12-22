@@ -66,7 +66,7 @@ bool GameLoop::init() {
 	map = new Map();
 	bm = new BulletManager();
 	player = new Player();
-	em = new EnemyManager();
+	em = new EnemyManager(bm);
 	wm = new WaveManager();
 	wm->em = em;
 	//done with the player icon so its easier to see for now
@@ -101,7 +101,7 @@ void GameLoop::update()
 {
 	map->Update();
 	player->update(map->map);
-	em->update(bm->bullets);
+	em->update();
 	wm->Update();
 	score->update();
 	bm->update();
