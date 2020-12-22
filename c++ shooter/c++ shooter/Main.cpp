@@ -1,8 +1,10 @@
 #include "GameLoop.h"
+#include "Player.h"
 #include "Score.h"
 
 //this can be accessed in any cpp file by adding "extern GameLoop * gameLoop"
 GameLoop* gameLoop;
+extern Player* player;
 
 int main(int argc, char* args[])
 {
@@ -17,6 +19,9 @@ int main(int argc, char* args[])
 	while (gameLoop->processInput()) {
 		gameLoop->update();
 		gameLoop->draw();
+		if (player->dead) {
+			break;
+		}
 	}
 
 	//perform any necessary cleaning up

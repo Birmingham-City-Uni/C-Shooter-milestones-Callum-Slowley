@@ -26,6 +26,6 @@ void HpBar::draw()
 	int hpWidth = player->currentHp * unitFactor;
 	//drawning the player hp bar through the main renderer
 	SDL_Rect healthBar = { 0,32,hpWidth,25 };
-	SDL_SetRenderDrawColor(gameLoop->renderer, 55, 100, 1, 255);
+	SDL_SetRenderDrawColor(gameLoop->renderer, 184, 238, 0, 255);
 	SDL_RenderFillRect(gameLoop->renderer, &healthBar);
 }

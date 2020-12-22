@@ -5,6 +5,7 @@
 
 extern GameLoop* gameLoop;
 extern Score* score;
+
 Player::Player()
 {
 	//player pos and scale 
@@ -86,6 +87,9 @@ void Player::update(int map[20][25])
 		currentHp -= 3;
 		cout << "current HP: "<<currentHp;
 		hit = false;
+		if (currentHp <= 0) {
+			dead = true;
+		}
 	}
 }
 

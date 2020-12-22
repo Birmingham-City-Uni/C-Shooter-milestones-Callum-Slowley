@@ -28,7 +28,7 @@ public:
 	bool hit = false;
 	int maxHp;
 	int currentHp;
-
+	bool dead = false;
 private:
 	SDL_Texture* player;
 	SDL_Rect src;
