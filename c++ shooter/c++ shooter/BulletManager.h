@@ -11,6 +11,8 @@
 #include "TextureManager.h"
 #include "Player.h"
 #include "Sphere.h"
+#include <Windows.h>
+
 
 #define PI 3.14159265
 
@@ -35,6 +37,7 @@ public:
 				std::cout << "bullet shot"; // used for testing 
 				bullets.push_back(Bullet{ playerx,playery,playerAngle, 0.0f });
 				lastShot = SDL_GetTicks();
+				PlaySound(TEXT("Laser.wav"), NULL, SND_ASYNC);
 			}
 		}
 	}

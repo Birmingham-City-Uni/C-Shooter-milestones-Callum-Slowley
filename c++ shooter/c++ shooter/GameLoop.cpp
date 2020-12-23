@@ -8,6 +8,8 @@
 #include <vector>
 #include <iostream>
 #include <SDL_ttf.h>
+#include <xaudio2.h>
+#include "AudioManager.h"
 
 SDL_Renderer* GameLoop::renderer = nullptr;
 Map* map;
@@ -16,6 +18,7 @@ Score* score;
 EnemyManager* em;
 WaveManager* wm;
 HpBar* hp;
+AudioManager* am;
 
 
 GameLoop::GameLoop() {
@@ -61,16 +64,18 @@ bool GameLoop::init() {
 	}
 	
 	string scoreVal = "Score: ";
+	am = new AudioManager();
 	score = new Score( 30,GameLoop::renderer);
 	hp = new HpBar();
 	map = new Map();
 	bm = new BulletManager();
 	player = new Player();
-	em = new EnemyManager(bm);
+	em = new EnemyManager(bm,am);
 	wm = new WaveManager();
 	wm->em = em;
-	//done with the player icon so its easier to see for now
 	bm->init(TextureManager::LoadTexture("lazer.png"));
+	//Audio manager doesnt work so music is played at the start and then lost once the player shoots
+	PlaySound(TEXT("music.wav"), NULL, SND_LOOP | SND_ASYNC);
 	return true;
 }
 

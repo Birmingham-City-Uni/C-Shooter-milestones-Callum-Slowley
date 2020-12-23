@@ -5,11 +5,12 @@
 #include <vector>
 #include "Enemy.h"
 #include "BulletManager.h"
+#include "AudioManager.h"
 
 class EnemyManager
 {
 public:
-	EnemyManager(BulletManager* bm);
+	EnemyManager(BulletManager* bm,AudioManager*am);
 	~EnemyManager();
 	void spawning();
 	void update();
@@ -17,5 +18,6 @@ public:
 	vector<Enemy> enemyArray;
 private:
 	BulletManager* bm;
+	AudioManager* am;
 };
 

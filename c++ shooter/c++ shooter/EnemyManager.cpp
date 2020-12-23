@@ -4,7 +4,9 @@
 #include "WaveManager.h"
 #include "Map.h"
 #include "BulletManager.h"
+#include <windows.h> 
 #include<iostream>
+#include <SDL_audio.h>
 
 extern Map* map;
 extern WaveManager* wm;
@@ -12,7 +14,7 @@ extern Player* player;
 extern Score* score;
 
 
-EnemyManager::EnemyManager(BulletManager* newbm)
+EnemyManager::EnemyManager(BulletManager* newbm,AudioManager*em)
 {
 	bm = newbm;
 }
@@ -48,6 +50,7 @@ void EnemyManager::update()
 		if (enemyArray[i].boundingSphere->CollisionWithSphere(*player->boundingSphere)) {
 			cout << "collison with player ";
 			player->hit= true;
+
 		}
 	}
 	auto remove = std::remove_if(enemyArray.begin(), enemyArray.end(), [](const Enemy& e)
@@ -66,7 +69,7 @@ void EnemyManager::update()
 				bm->bullets[i].distance = 1000;
 				enemyArray[j].pos.x = 0xCCCCCCCC; //checked later
 				score->scoreValue += 10;
-
+				PlaySound(TEXT("Hit.wav"), NULL, SND_ASYNC);
 			}
 		}
 	}
