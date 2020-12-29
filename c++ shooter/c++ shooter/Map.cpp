@@ -100,14 +100,21 @@ void Map::Load(int arr[20][25])
 	//}
 	//ifs.close();
 
+	vector <string> lines;
+	while (!ifs.eof()) {
+		string s;
+		getline(ifs, s);
+		lines.push_back(s);
+	}
+	ifs.close();
 
-	////map in string form
-	//std::cout << "Map in string loading"<< endl;
-	//for (int i = 0; i < lines.size(); i++) {
-	//	std::cout<<i<<" " << lines[i] << endl;
-	//}
-	//std::cout << "Map in string loaded"<< endl;
-	////loading the map into a 2d array
+	//map in string form
+	std::cout << "Map in string loading"<< endl;
+	for (int i = 0; i < lines.size(); i++) {
+		std::cout<<i<<" " << lines[i] << endl;
+	}
+	std::cout << "Map in string loaded"<< endl;
+	//loading the map into a 2d array
 
 	
 

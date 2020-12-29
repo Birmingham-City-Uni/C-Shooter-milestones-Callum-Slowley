@@ -9,5 +9,5 @@ E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(
 E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(61,23): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
 E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(61,28): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
 E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(61,28): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\Map.cpp(90,6): warning C4101: 'lines': unreferenced local variable
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\Map.cpp(113,20): warning C4018: '<': signed/unsigned mismatch
   c++ shooter.vcxproj -> E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\Debug\c++ shooter.exe
