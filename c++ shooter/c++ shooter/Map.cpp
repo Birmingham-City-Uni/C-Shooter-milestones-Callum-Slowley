@@ -59,8 +59,20 @@ Map::Map()
 		}
 		myfile << "\n";
 	}
+	myfile.close();
 
-
+	//saving the map to bin file
+	ifstream infile("Mapsave.txt", ifstream::binary);
+	ofstream outfile("binaryMap.txt", ofstream::binary);
+	infile.seekg(0, infile.end);
+	long size = infile.tellg();
+	infile.seekg(0);
+	char* buffer = new char[size];
+	infile.read(buffer, size);
+	outfile.write(buffer, size);
+	delete[] buffer;
+	outfile.close();
+	infile.close();
 }
 
 Map::~Map()
@@ -99,6 +111,7 @@ void Map::Load(int arr[20][25])
 	//	}
 	//}
 	//ifs.close();
+
 
 	vector <string> lines;
 	while (!ifs.eof()) {
