@@ -1,4 +1,4 @@
-﻿  GameLoop.cpp
+﻿  Map.cpp
 E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\Sphere.h(13,20): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
 E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\Player.h(21,13): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
 E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\Player.h(24,13): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
@@ -9,4 +9,5 @@ E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(
 E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(61,23): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
 E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(61,28): warning C4838: conversion from 'float' to 'int' requires a narrowing conversion
 E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\BulletManager.h(61,28): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\c++ shooter\Map.cpp(90,6): warning C4101: 'lines': unreferenced local variable
   c++ shooter.vcxproj -> E:\Home\Unity\milestones-Callum-Slowley\c++ shooter\Debug\c++ shooter.exe

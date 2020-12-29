@@ -2,6 +2,8 @@
 #include <SDL_image.h>
 #include "TextureManager.h"
 #include "Animations.h"
+#include <fstream>
+#include <iostream>
 
 //map data
 int level1[20][25] = {
@@ -47,6 +49,18 @@ Map::Map()
 	src.h = 32;
 	pos.w = 32;
 	pos.h = 32;
+
+	//Map saved to text doccument
+	ofstream myfile;
+	myfile.open("Mapsave.txt");
+	for (int row = 0; row < 20; row++) {
+		for (int column = 0; column < 25; column++) {
+			myfile << map[row][column];
+		}
+		myfile << "\n";
+	}
+
+
 }
 
 Map::~Map()
@@ -61,6 +75,42 @@ void Map::Load(int arr[20][25])
 			map[row][column] = arr[row][column];
 		}
 	}
+
+	//reading the file back into a 2d array
+	ifstream ifs("Mapsave.txt");
+
+	if (!ifs) {
+		std::cout << "no file named: Mapsave.txt" << endl;
+		return;
+	}
+	else {
+		std::cout << "file found" << endl;
+	}
+
+	//unable to load the file back into a 2d array
+	//int lines[20][25];
+	//while (!ifs.eof()) {
+	//	for (int i = 0; i < 20; i++) {
+	//		for (int j = 0; i < 25; i++) {
+	//			unsigned char number = ifs.get();
+	//			int numberAsInt = int(number);
+	//			cout << numberAsInt;
+	//		}
+	//	}
+	//}
+	//ifs.close();
+
+
+	////map in string form
+	//std::cout << "Map in string loading"<< endl;
+	//for (int i = 0; i < lines.size(); i++) {
+	//	std::cout<<i<<" " << lines[i] << endl;
+	//}
+	//std::cout << "Map in string loaded"<< endl;
+	////loading the map into a 2d array
+
+	
+
 }
 
 void Map::Draw()
