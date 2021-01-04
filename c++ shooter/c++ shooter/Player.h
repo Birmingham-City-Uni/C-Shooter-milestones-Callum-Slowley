@@ -29,11 +29,11 @@ public:
 	int maxHp;
 	int currentHp;
 	bool dead = false;
+	int speed;
 private:
 	SDL_Texture* player;
 	SDL_Rect src;
 	SDL_Rect pos;
-	int speed;
 	float rotationAngle;
 
 

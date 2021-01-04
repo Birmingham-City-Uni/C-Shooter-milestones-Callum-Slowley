@@ -98,7 +98,8 @@ void EnemyManager::update()
 					}
 					//push_back adds an new item to the end of the vector
 					enemyArray.push_back(split2);
-
+					//if a split occurs players speed slightly increses. increses by 4% of the base speed
+					player->speed += 0.2;
 				}
 			}
 		}
