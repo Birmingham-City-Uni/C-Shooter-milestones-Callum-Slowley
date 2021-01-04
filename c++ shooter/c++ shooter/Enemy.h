@@ -17,6 +17,7 @@ public:
 	bool ypos;
 	SDL_Rect pos;
 	Sphere* boundingSphere;
+	bool canSplit;
 
 private:
 	SDL_Texture* enemyTexture;
@@ -24,5 +25,4 @@ private:
 	int speed;
 	int maxHealth;
 	int currentHealth;
-	bool canSplit;
 };

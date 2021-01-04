@@ -14,6 +14,11 @@ Enemy::Enemy()
 	speed = 2;
 	ypos = true;
 	boundingSphere = new Sphere(pos.x + (pos.w / 2), pos.y + (pos.h / 2), pos.w / 2);
+	//chance for the enermy to split
+	int splitChance = rand() % 5;
+	if (splitChance == 1) {
+		canSplit = true;
+	}
 }
 
 Enemy::~Enemy()

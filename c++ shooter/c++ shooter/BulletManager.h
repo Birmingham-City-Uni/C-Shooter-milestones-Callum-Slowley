@@ -27,7 +27,7 @@ class BulletManager {
 public:
 
 	void init(SDL_Texture* bullet) {
-		//load the texture for the lazer
+		//load the texture for the bullet
 		bulletTexture = bullet;
 	}
 
@@ -74,7 +74,7 @@ private:
 
 	//time limit between shots
 	const int SHOOT_TIMER_MS = 300;
-	//numer of pixels travelled per frame
+	//number of pixels travelled per frame
 	const int BULLET_VELOCITY = 15;
 	unsigned int lastShot = 0;
 };

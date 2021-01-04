@@ -67,9 +67,39 @@ void EnemyManager::update()
 			SDL_Rect nullRect;
 			if (SDL_IntersectRect(&bulletRect, &enemyRect, &nullRect)) {;
 				bm->bullets[i].distance = 1000;
+				int enenmyX = enemyArray[j].pos.x;
 				enemyArray[j].pos.x = 0xCCCCCCCC; //checked later
 				score->scoreValue += 10;
 				PlaySound(TEXT("Hit.wav"), NULL, SND_ASYNC);
+				//spliting the enermy if they can split;
+				if (enemyArray[j].canSplit) {
+
+					std::cout << "SPLIT" << endl;
+					//done twice so the enermy splits in 2
+
+					// new enemy is created its x and y values are set then added to the vector array
+					Enemy split1;
+					split1.pos.x = enenmyX + 32;
+					//used to keep in bounds
+					if (split1.pos.x > 12 * 32) {
+						split1.pos.x = 12 * 32;
+					}
+					split1.pos.y = enemyArray[j].pos.y;
+					//push_back adds an new item to the end of the vector
+					enemyArray.push_back(split1);
+
+					// new enemy is created its x and y values are set then added to the vector array
+					Enemy split2;
+					split2.pos.x = enenmyX - 32;
+					split2.pos.y = enemyArray[j].pos.y;
+					//used to keep in bounds
+					if (split2.pos.x < 6 * 32) {
+						split2.pos.x = 6 * 32;
+					}
+					//push_back adds an new item to the end of the vector
+					enemyArray.push_back(split2);
+
+				}
 			}
 		}
 	}
